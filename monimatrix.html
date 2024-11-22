@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monimatrix</title>
+    <link rel="stylesheet" href="monimatrix.css">
+    <!--sticky header-->
+    <div class="sticky-header">
+         <b style="color: red;">Important Notice</b><br>
+Please be mindful of fake sites runned by fraudulent parties posing as Monimatrix Multiventures or its affiliates.<br>
+Do not mistake any person to be us in what so ever way online without confirmation from us.
+    </div>
+</head>
+<body>
+    <header>
+        <p>
+            <br>
+            <p>
+                <br>
+                <p>
+                    <br>
+        <section class="header">
+            <div class="logo"><a href="/">MONIMATRIX</a></div>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-item">Nigeria</li>
+                    <li class="menu-item">
+                        <div class="nig-green"></div>
+                        <div class="nig-white"></div>
+                        <div class="nig-green"></div>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <p>
+        <br>
+        <p>
+            <br>
+            <p>
+                <br>
+                <p>
+                    <br>
+                    <p>
+                        <br>
+                        <p>
+                            <br>
+    <section class="top">
+        <div class="top-con">
+            <div class="welcome">
+                <h4>Welcome to <span>MONIMATRIX</span></h4> 
+            </div>
+            <a href="about.html" class="btn pointer">About Us</a>
+            <div class="bg-gradient1"></div>
+            <div class="bg-gradient2"></div>
+        </div>
+    </section>
+    <script>
+        const sections = {
+            one: false,
+            two: false,
+            three: false,
+            four: false,
+            five: false,
+            six: false,
+            seven: false,
+            eight: false,
+            nine: false,
+            ten: false,
+        };
+
+        function toggleSection(id) {
+            // Reset all sections
+            Object.keys(sections).forEach(key => {
+                document.getElementById(`desc-${key}`).classList.remove('about-item-open');
+                document.getElementById(`desc-${key}`).classList.add('about-item-close');
+                document.getElementById(`icon-${key}`).classList.remove('rotate-180');
+                document.getElementById(`icon-${key}`).classList.add('rotate-0');
+                sections[key] = false;
+            });
+
+            // Toggle the clicked section
+            sections[id] = !sections[id];
+            const desc = document.getElementById(`desc-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            if (sections[id]) {
+                desc.classList.remove('about-item-close');
+                desc.classList.add('about-item-open');
+                icon.classList.remove('rotate-0');
+                icon.classList.add('rotate-180');
+            } else {
+                desc.classList.remove('about-item-open');
+                desc.classList.add('about-item-close');
+                icon.classList.remove('rotate-180');
+                icon.classList.add('rotate-0');
+            }
+        }
+
+        function handleDownload() {
+            const fileUrl = 'public/Agreement.pdf'; // Replace with your file path
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'Agreement.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+    <footer class="sticky-footer">
+        <div class="footer-top">
+            <div class="footer-top-con">
+                <div class="footer-top-social">
+                    Please follow us on 
+                    <a href="https://twitter.com/monimatric">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="15px" width="15px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-double">
+                    <span class="footer-red">For enquiries, email:</span>
+                    <span class="footer-light">monimatricventures@gmail.com</span>
+                </div>
+                <div class="footer-double">
+                    <span class="footer-red">For enquiries, phone:</span>
+                    <span class="footer-light">+234(0)8189207600, +234(0)8167674632</span>
+                </div>
+                <div class="footer-double">
+                    <span class="footer-red">Contact Us via address:</span>
+                    <span class="footer-light">7b Omudioga Rd, Port Harcourt, Rivers State Nigeria</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 MONIMATRIX MULTIVENTURES. BN 7447941 (Registered by the Corporate Affairs Commission of Nigeria). All Rights Reserved.</p>
+            <p class="sticky-footer-text">
+                Monimatrix Multiventures trades Forex, provides copy trade and trains serious-minded individuals in Forex art. 
+                Our efforts and expectations are to add adorable value to investments from clients across the globe. 
+                Although Monimatrix Multiventures knows full well that trading the Forex market involves a high degree of risk, 
+                we are dedicated to softening the risks associated with it. However, we advise clients to invest only the funds they can afford to lose.
+            </p>
+        </div>
+    </footer>
+    <section>
+        <button class="toggle-btn" id="toggleFooter">▶</button>
+  <div class="footer-content" id="footerContent">
+    <p>Monimatrix Multiventures trades Forex, provides copy trade and trains serious minded individual Forex art. Our efforts and
+        expectations is to add adorable values to investment from client across the globe. Although Monimatrix Multiventures knows full
+        well that trading of Forex market have a high degree of risk involve and we are dedicated to soften the risk accrue to it. But even at
+        that, we advice client to invest the fund they will afford to loss.</p>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('toggleFooter');
+    const footerContent = document.getElementById('footerContent');
+
+    toggleButton.addEventListener('click', () => {
+      footerContent.classList.toggle('open');
+      toggleButton.textContent = footerContent.classList.contains('open') ? '▼' : '▶';
+    });
+  </script>
+    </section>
+</body>
+</html>
